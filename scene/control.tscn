@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dhr80ss8h7jtk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="first__grid_exemple" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+offset_right = 630.0
+offset_bottom = 651.0
+theme_override_constants/h_separation = 60
+columns = 3
+
+[node name="image1" type="Panel" parent="first__grid_exemple"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="first__grid_exemple/image1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="image2" type="Panel" parent="first__grid_exemple"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="first__grid_exemple/image2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.580392, 0.537255, 0.94902, 1)
+
+[node name="image3" type="Panel" parent="first__grid_exemple"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="first__grid_exemple/image3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.329412, 0.835294, 1, 1)

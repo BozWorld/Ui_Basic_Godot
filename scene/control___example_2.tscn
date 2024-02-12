@@ -1,0 +1,189 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmod0idp5e1vl"]
+
+[ext_resource type="Texture2D" uid="uid://b4ius8cat86gs" path="res://assets/UI/text_box.png" id="1_ewu3h"]
+[ext_resource type="Script" path="res://scene/color_menu.gd" id="2_p2ufu"]
+[ext_resource type="FontFile" uid="uid://wjy5t0gsvqmq" path="res://assets/UI/PPNeueBit-Bold.otf" id="3_tieem"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8b3s5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8hr2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3wj3r"]
+
+[node name="Control - Example 2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="color_menu" type="NinePatchRect" parent="." node_paths=PackedStringArray("Button1", "Button2", "Button3", "grid", "color1", "color2", "color3", "Background_color")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.5
+offset_top = -270.0
+offset_right = 151.5
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ewu3h")
+patch_margin_top = 25
+patch_margin_bottom = 50
+script = ExtResource("2_p2ufu")
+Button1 = NodePath("VBoxContainer/CheckButton1")
+Button2 = NodePath("VBoxContainer/CheckButton2")
+Button3 = NodePath("VBoxContainer/CheckButton3")
+grid = NodePath("GridContainer")
+color1 = NodePath("GridContainer/Panel1/ColorRect")
+color2 = NodePath("GridContainer/Panel2/ColorRect")
+color3 = NodePath("GridContainer/Panel3/ColorRect")
+Background_color = NodePath("../ColorRect")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="color_menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.22
+offset_top = -240.535
+offset_right = -5.10992
+offset_bottom = -137.535
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 5
+
+[node name="CheckButton1" type="CheckButton" parent="color_menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tieem")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8b3s5")
+text = "Color 1"
+
+[node name="CheckButton2" type="CheckButton" parent="color_menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tieem")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m8hr2")
+text = "Color 2"
+
+[node name="CheckButton3" type="CheckButton" parent="color_menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tieem")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3wj3r")
+text = "Color 3"
+
+[node name="GridContainer" type="GridContainer" parent="color_menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.465
+offset_top = 40.0
+offset_right = 47.535
+offset_bottom = 180.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 70
+theme_override_constants/v_separation = 70
+columns = 3
+
+[node name="Panel1" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0.262745, 0.854902, 1)
+
+[node name="Panel2" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.933333, 0.666667, 0.933333, 1)
+
+[node name="Panel3" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.670588, 0.733333, 1)
+
+[node name="Panel4" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.670588, 0.752941, 0.223529, 1)
+
+[node name="Panel5" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.678431, 1, 0.490196, 1)
+
+[node name="Panel6" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.917647, 0, 0.447059, 1)
+
+[node name="Panel7" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel7"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.184314, 0.478431, 0.329412, 1)
+
+[node name="Panel8" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel8"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0.529412, 0.447059, 1)
+
+[node name="Panel9" type="Panel" parent="color_menu/GridContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="color_menu/GridContainer/Panel9"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0862745, 0.619608, 0.690196, 1)
+
+[connection signal="pressed" from="color_menu/VBoxContainer/CheckButton1" to="color_menu" method="_on_check_button_1_pressed"]
+[connection signal="pressed" from="color_menu/VBoxContainer/CheckButton2" to="color_menu" method="_on_check_button_2_pressed"]
+[connection signal="pressed" from="color_menu/VBoxContainer/CheckButton3" to="color_menu" method="_on_check_button_3_pressed"]
