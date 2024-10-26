@@ -1,9 +1,12 @@
+Label
+RichTextLabel
 Sprite2D
+GridContainer
+CanvasLayer
 Camera2D
 Node
 ColorRect
 Panel
-GridContainer
 CheckButton
 VBoxContainer
 NinePatchRect

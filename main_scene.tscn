@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://f66essferdli"]
+
+[node name="Node" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_left = 829.0
+offset_top = 116.0
+offset_right = 869.0
+offset_bottom = 156.0
+
+[node name="hpIcon" type="Sprite2D" parent="CanvasLayer/GridContainer"]
+
+[node name="shieldIcon" type="Sprite2D" parent="CanvasLayer/GridContainer"]
+
+[node name="stealIcon" type="Sprite2D" parent="CanvasLayer/GridContainer"]
+
+[node name="hpCount" type="RichTextLabel" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "100
+"
+
+[node name="shieldCound" type="RichTextLabel" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="stealCount" type="RichTextLabel" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "100"
